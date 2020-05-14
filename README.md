@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Realworld_dataset_capturer
 ![image](http://github.com/Chuanfang-Neptune/Realworld_dataset_capturer/Intro.png)
@@ -39,3 +40,6 @@ rosrun gazebo_ros spawn_model -file $(rospack find ur5_setup)/urdf/ur5_single_ar
 `roslaunch ur5_setup ur5_single_arm_gazebo.launch`
 
 
+=======
+# Realworld_dataset_capturer
+>>>>>>> 67b721fee2fa9ea2f98efa9636a7f7e2f9ac4255
