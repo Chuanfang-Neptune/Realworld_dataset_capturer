@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 
 # Realworld_dataset_capturer
-![image](http://github.com/Chuanfang-Neptune/Realworld_dataset_capturer/Intro.png)
+![image](http://github.com/Chuanfang-Neptune/Realworld_dataset_capturer/Intro.jpg)
     This project controls a UR5 robot arm with an Intel D435 sensor to move in a spherical path around a training object on a table.
     During the robot motion RGB and depth images of the training object are captured. 
     6D poses of the camera are automatically calculated from the joint states of the robot.
