@@ -1,0 +1,61 @@
+<package>
+  <name>ur5_dataset_capturer</name>
+  <version>0.1.1</version>
+  <description>
+    UR5 dataset capturer program pacakge
+    drive the robot to move around the training object and sample data for the dataset
+  </description>
+
+  <maintainer email="ningchuanfang@hotmail.com">Chuanfang Ning</maintainer>
+  <author email="ningchuanfang@hotmail.com">Chuanfang Ning</author>
+  
+  <license>BSD</license>
+
+  <url type="website"> </url>
+  <url type="bugtracker"> </url>
+  <url type="repository">https://github.com/Chuanfang-Neptune/UR5_dataset_capturer</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>image_transport</build_depend> 
+  <build_depend>roscpp</build_depend> 
+  <build_depend>std_msgs</build_depend> 
+  <build_depend>std_srvs</build_depend> 
+  <build_depend>sensor_msgs</build_depend> 
+  <build_depend>ffmpeg</build_depend>
+  <build_depend>camera_info_manager</build_depend>  <run_depend>image_transport</run_depend> 
+  <run_depend>roscpp</run_depend> 
+  <run_depend>std_msgs</run_depend> 
+  <run_depend>std_srvs</run_depend> 
+  <run_depend>sensor_msgs</run_depend> 
+  <run_depend>ffmpeg</run_depend>
+  <run_depend>camera_info_manager</run_depend>
+  <run_depend>v4l-utils</run_depend>
+  <build_depend>cv_bridge</build_depend>
+  <run_depend>cv_bridge</run_depend>
+  <build_depend>interactive_markers</build_depend>
+  <build_depend>moveit_core</build_depend>
+  <build_depend>moveit_visual_tools</build_depend>
+  <build_depend>moveit_ros_planning</build_depend>
+  <build_depend>moveit_ros_planning_interface</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>geometric_shapes</build_depend>
+  <build_depend>pcl_ros</build_depend>
+  <build_depend>pcl_conversions</build_depend>
+  <build_depend>rosbag</build_depend>
+  <build_depend>tf2_ros</build_depend>
+  <build_depend>tf2_eigen</build_depend>
+  <build_depend>tf2_geometry_msgs</build_depend>
+  <run_depend>interactive_markers</run_depend>
+  <run_depend>moveit_core</run_depend>
+  <run_depend>moveit_visual_tools</run_depend>
+  <run_depend>moveit_ros_planning</run_depend>
+  <run_depend>moveit_ros_planning_interface</run_depend>
+  <run_depend>pluginlib</run_depend>
+  <run_depend>geometric_shapes</run_depend>
+  <run_depend>pcl_ros</run_depend>
+  <run_depend>pcl_conversions</run_depend>
+  <run_depend>rosbag</run_depend>
+  <run_depend>tf2_ros</run_depend>
+  <run_depend>tf2_eigen</run_depend>
+  <run_depend>tf2_geometry_msgs</run_depend>
+  </package>
