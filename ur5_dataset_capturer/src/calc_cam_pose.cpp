@@ -50,7 +50,6 @@ cv::Mat Quaternion2Matrix(float x, float y, float z, float w) {
 
 cv::Mat Matrix2Quaternion(cv::Mat matrix) {
   float tr, qx, qy, qz, qw;
-  // 计算矩阵轨迹
   float a[4][4] = {0};
   for (int i = 0; i < 4; i++)
     for (int j = 0; j < 4; j++)
