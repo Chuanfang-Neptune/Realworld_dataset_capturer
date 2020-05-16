@@ -82,8 +82,14 @@ install(DIRECTORY include/${PROJECT_NAME}/
 )
 
 add_executable(robot_motion
+<<<<<<< HEAD
+  src/readconfig.cpp
+  src/glfunc.cpp
+  src/imageCapturer.cpp
+=======
   src/glfunc.cpp
   src/imageconverter.cpp
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
   src/calc_cam_pose.cpp
   src/robot_motion.cpp
 )
@@ -96,6 +102,8 @@ target_link_libraries(robot_motion
   ${catkin_LIBRARIES}
 )
 
+<<<<<<< HEAD
+=======
 add_executable(gltest
   src/gltest.cpp
 )
@@ -107,5 +115,6 @@ target_link_libraries(gltest
   /usr/lib/x86_64-linux-gnu/libfreeimage-3.17.0.so
   ${catkin_LIBRARIES}
 )
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
 
 

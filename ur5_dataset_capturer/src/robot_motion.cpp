@@ -19,7 +19,11 @@
 
 #include "calc_cam_pose.h"
 #include "glfunc.h"
+<<<<<<< HEAD
+#include "imageCapturer.h"
+=======
 #include "imageconverter.h"
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
 #include "opengl_math.h"
 #include <FreeImage.h>
 #include <GL/freeglut.h>
@@ -35,6 +39,14 @@
 #include <stdlib.h>
 #include <string>
 #include <vector>
+<<<<<<< HEAD
+#include <sys/types.h>
+#include <sys/stat.h>
+#include "json_utl.h"
+#include "readconfig.h"
+namespace rvt = rviz_visual_tools;
+// shader
+=======
 
 namespace rvt = rviz_visual_tools;
 // shader
@@ -44,6 +56,7 @@ const char *pFSFileName = "/home/ncf/catkin/src/ur5_dataset_capturer/src/shader.
 std::string rgbTopic = "/camera_kinect_head_mount/depth/image_raw";
 std::string depthTopic = "/camera_kinect_head_mount_ir/depth/image_raw";
 
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
 
 std::string filename, filename1s;
 Matrix44f mmatrix, cmatrix, temp, mvp;
@@ -65,7 +78,14 @@ Matrix44f pmatrix = {
   0, 0, 1, 0}; // calibrated
 
 int main(int argc, char **argv) {
+<<<<<<< HEAD
+
+  //printf("zNear=%f\n",zNear);
+  readconfig();
+  lg = readstl(STLFileName.c_str());
+=======
   lg = readstl(STLFileName);
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
   glutInit(&argc, argv);
   // buffercount, color mode, buffer type
   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
@@ -168,7 +188,10 @@ int main(int argc, char **argv) {
             firstplan = 1;
             m = -2;
             l = -2;
+<<<<<<< HEAD
+=======
             //here I think should add jgp = 
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
           }
         }  
         else if (firstplan == 1) {
@@ -216,9 +239,16 @@ int main(int argc, char **argv) {
           // counter
           count += 1;
           //json file name
+<<<<<<< HEAD
+          int isCreate = mkdir(jsonFilePath.c_str(),S_IRUSR | S_IWUSR | S_IXUSR | S_IRWXG | S_IRWXO);
+          filename = jsonFilePath + std::to_string(count) + ".json";
+          //segmentation image file name
+          filename1s = jsonFilePath + std::to_string(count) + "s.jpg";
+=======
           filename = "/home/ncf/ROS/json/" + std::to_string(count) + ".json";
           //segmentation image file name
           filename1s = "/home/ncf/ROS/json/" + std::to_string(count) + "s.jpg";
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
           // json populator
           float temprx = move_group.getCurrentPose().pose.orientation.x;
           float tempry = move_group.getCurrentPose().pose.orientation.y;
@@ -268,6 +298,13 @@ int main(int argc, char **argv) {
 
           //scence infomation: camera & object 
           Json::Value event;
+<<<<<<< HEAD
+          event["camera_data"]["location_worldframe"] = jsonset_location(temppx,temppy,temppz);
+          event["camera_data"]["quaternion_xyzw_worldframe"] = jsonset_quaternion(temprx,tempry,temprz,temprw);
+          event["object_data"]["location_worldframe"] = jsonset_location(LEGO_POSITION_X,LEGO_POSITION_Y,LEGO_POSITION_Z);
+          event["object_data"]["quaternion_xyzw_worldframe"] = jsonset_quaternion(lego_pose);
+          event["object_data"]["projected_cuboid"] = jsonset_box(lg,mvp,WINDOWWIDTH,WINDOWHEIGHT);
+=======
           Json::Value camera_location_worldframe(Json::arrayValue);
           camera_location_worldframe.append(Json::Value(temppx));
           camera_location_worldframe.append(Json::Value(temppy));
@@ -344,6 +381,7 @@ int main(int argc, char **argv) {
           event["object_data"]["quaternion_xyzw_worldframe"] = object_quaternion_xyzw;
           //event["object_data"]["cuboid"] = object_cuboid;
           event["object_data"]["projected_cuboid"] = object_cuboidp;
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
 
           //write scence info into json file
           remove(filename.c_str());  //remove old file
@@ -356,17 +394,29 @@ int main(int argc, char **argv) {
           os.close();
 
           //capture rgb file  
+<<<<<<< HEAD
+          std::string rgbfilename = jsonFilePath + std::to_string(count) + "r.png";
+          remove(rgbfilename.c_str());             //remove old image file
+          imageCapturerRGB imc(rgbfilename.c_str()); //imageCapturerRGB instance imc 
+=======
           std::string rgbfilename = "/home/ncf/ROS/json/" + std::to_string(count) + "r.png";
           remove(rgbfilename.c_str());             //remove old image file
           ImageConverter imc(rgbfilename.c_str()); //ImageConverter instance imc 
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
           imc.set_filename(rgbfilename.c_str(), rgbTopic);  //call set_filename 
           while (!file_exists(rgbfilename.c_str()))  // wait until the file were created
             ;
 
           //capture depth file  
+<<<<<<< HEAD
+          std::string depthfilename = jsonFilePath + std::to_string(count) + "d.png"; 
+          remove(depthfilename.c_str()); 
+          imageCapturerDepth imd(depthfilename.c_str());
+=======
           std::string depthfilename = "/home/ncf/ROS/json/" + std::to_string(count) + "d.png"; 
           remove(depthfilename.c_str()); 
           ImageConverted imd(depthfilename.c_str());
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
           imd.set_filename(depthfilename.c_str(), depthTopic);
           while (!file_exists(depthfilename.c_str()))
             ;

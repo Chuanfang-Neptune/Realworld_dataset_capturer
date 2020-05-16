@@ -33,6 +33,11 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *
  *********************************************************************/
+<<<<<<< HEAD
+
+ //This cpp is based on k-okada's work https://github.com/ros-drivers/usb_cam
+=======
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
 #define __STDC_CONSTANT_MACROS
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+#ifndef _OPENGL_MATH_H_
+#define _OPENGL_MATH_H_
+=======
 #ifndef OPENGL_MATH_H
 #define OPENGL_MATH_H
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
 
 
 #include <cmath>

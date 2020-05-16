@@ -256,10 +256,17 @@ void CompilerShaders()
   // the buffer of shader texts
   std::string vs, fs;
   // read the text of shader texts to buffer
+<<<<<<< HEAD
+  if (!ReadShader(pVSFileName.c_str(), vs)) {
+    exit(1);
+  }
+  if (!ReadShader(pFSFileName.c_str(), fs)) {
+=======
   if (!ReadShader(pVSFileName, vs)) {
     exit(1);
   }
   if (!ReadShader(pFSFileName, fs)) {
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
     exit(1);
   }
 

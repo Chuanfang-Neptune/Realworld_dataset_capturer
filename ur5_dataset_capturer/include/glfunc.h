@@ -10,7 +10,16 @@
 #include <string>
 #include <vector>
 #include <cassert>
+<<<<<<< HEAD
+#include<cstring>
+//#include "robot_motion.h"
+extern std::string pFileName,pVSFileName,pFSFileName,filename1s;
+extern int WINDOWWIDTH,WINDOWHEIGHT;
+extern Matrix44f mvp;
+using namespace std;
+=======
 #include "robot_motion.h"
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
 
 #define MAX_VERTICES 300000
 #define MAX_INDICES 300000

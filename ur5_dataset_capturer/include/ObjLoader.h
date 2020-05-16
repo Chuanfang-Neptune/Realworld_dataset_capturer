@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+#ifndef _OBJLOADER_H_
+#define _OBJLOADER_H_
+=======
 #ifndef OBJLOADER_H
 #define OBJLOADER_H
+>>>>>>> 28e165c9eec863ea1387fb921c9ce7195f8f4339
 
 #include <vector>
 #include <string>
