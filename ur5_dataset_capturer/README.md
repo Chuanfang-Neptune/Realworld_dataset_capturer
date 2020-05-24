@@ -14,13 +14,8 @@ ROS driver for USB cameras. Based on http://wiki.ros.org/usb_cam
 Read camera topics, training object transformations, shader file locations from setting.conf
 ## robot_motion
 Main program of driving robot to move and call other functions of capturing images and calculating pose data.
-=======
 
-# usb_cam
-  based on usb_cam [![Build Status](https://api.travis-ci.org/bosch-ros-pkg/usb_cam.png)](https://travis-ci.org/bosch-ros-pkg/usb_cam)
-
-
-## 2020.05.01 Ning chuanfang
+## Program logic
 1. control ur5 move to planned poses
 2. write json file : camera pose , object pose and projected_cuboid
 3. subscribe camera image_raw topic, write rgb and depth image using opencv
